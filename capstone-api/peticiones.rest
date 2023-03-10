@@ -1,0 +1,84 @@
+@hostname = http://localhost
+@port = 3000
+@url-local = {{hostname}}:{{port}}
+
+
+### 
+GET {{url-local}}/api/usuarios
+
+
+### 
+GET {{url-local}}/api/usuarios/1
+
+
+
+### 
+GET {{url-local}}/api/usuarios/1/1/1
+
+
+
+
+
+
+
+
+
+
+
+### 
+GET {{url-local}}/api/usuarios/11/1
+
+
+### 
+GET {{url-local}}/api/estudiantes/11/1
+
+### 
+GET {{url-local}}/api/estudiantes/11/1/8
+
+### 
+GET {{url-local}}/api/clases/11/1
+
+//Actaulizar nota
+###
+PUT {{url-local}}/api/estudiantes/11/1/1/1
+Content-Type: application/json
+
+{
+    "nota": 85
+
+}
+
+
+
+
+
+
+
+### 
+PUT {{url-local}}/api/estudiantes/1
+Content-Type: application/json
+
+{
+    "nombre": "Pablito arcid ha cambiado",
+    "fnacimiento": "2012-10-14"
+}
+
+
+
+### 
+POST {{url-local}}/api/asignaturas/1
+Content-Type: application/json
+
+{
+    "nombre": "Social Science"
+}
+
+
+
+### 
+PUT {{url-local}}/api/asignaturas/6
+Content-Type: application/json
+
+{
+    "nombre": "Ciencias Sociales"
+}
